@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+ mysql:
+  image: mysql:8
+  environment:
+   - MYSQL_ROOT_PASSWORD=1
+ nginx:
+  image: 8701256320/lev145:Lev
+  ports:
+   - "88:88"
+
+
