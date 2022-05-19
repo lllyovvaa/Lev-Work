@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<h2>Data</h2>
+<form method="post" action="/add_message">
+    <input type="text" name="name">
+    <input type="text" name="secondname">
+    <input type="text" name="about">
+    <button type="submit">Add info</button>
+</form>
+
+<h3>Data list</h3>
+{% for firstname in names %}
+<div>{{ firstname.name }}&nbsp;
+     {% for secondname in names %}
+     <b>{{ secondname.name }}</b>
+        {% endfor %}
+  {% for about in names%}
+    <b>{{ about.name }}</b>
+    {% endfor %}
+</div>
+{% endfor %}
+</body>
+</html>
